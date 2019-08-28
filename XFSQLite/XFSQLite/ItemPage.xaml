@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFSQLite"
+             x:Class="XFSQLite.ItemPage" Title="{Binding Title}">
+
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Text="+" Clicked="ItemEdit">
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="edit.png" />
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </TabbedPage.ToolbarItems>
+
+    <ContentPage Title="İçerik">
+        <ContentPage.Content>
+        <StackLayout Padding="10" HorizontalOptions="Center">
+            <Label Text="{Binding Content}"></Label>
+        </StackLayout>
+    </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Açıklama">
+        <ContentPage.Content>
+            <StackLayout Padding="10" HorizontalOptions="Center">
+                <Label Text="{Binding Description}"></Label>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <ContentPage Title="Diğer">
+        <ContentPage.Content>
+            <StackLayout Padding="10" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Diğer"></Label>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+
+    <!--<local:Page1></local:Page1>
+    <local:Page2></local:Page2>-->
+    <!--<local:Page3></local:Page3>-->
+</TabbedPage>

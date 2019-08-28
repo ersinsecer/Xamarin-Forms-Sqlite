@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XFSQLite.NewItemPage" Title="{Binding Title}">
+    <ScrollView>
+        <StackLayout Margin="20" >
+            <StackLayout>
+                <Label Text="Başlık" />
+                <Entry Text="{Binding Title}" />
+            </StackLayout>
+
+            <StackLayout>
+                <Label Text="İçerik" />
+                <Editor Text="{Binding Content}" />
+            </StackLayout>
+
+            <Label Text="Açıklama" />
+            <StackLayout>
+                <Editor Text="{Binding Description}" />
+            </StackLayout>
+
+            <StackLayout>
+                <Button Text="Kaydet" Clicked="SaveClicked" />
+                <Button Text="Sil" Clicked="DeleteClicked" />
+                <Button Text="İptal" Clicked="CancelClicked" />
+            </StackLayout>
+
+        </StackLayout>
+    </ScrollView>
+</ContentPage>
